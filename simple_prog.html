@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // Task 1: Simple Programs todo for variables
+            //Declare four variables without assigning values and print them in console
+
+            var a;
+            var b;
+            var c;
+            var d;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            console.log(d);
+
+            var myvar = 1;
+            console.log(myvar);
+
+            // Declare variables to store your first name, last name, marital status, country and age in multiple lines
+            var firstName = "vignesh";
+            var lastName = "T";
+            var maritalStatus = "unmarried";
+            var countryname = "India";
+            var age = 21;
+
+            // Declare variables to store your first name, last name, marital status, country and age in a single line
+            var firstName = "vignesh",
+                lastName = "T",
+                maritalStatus = "unmarried",
+                countryname = "India",
+                age = 21;
+
+            // Declare variables and assign string, boolean, undefined and null data types
+            var name = "vignesh"; //string
+            var boo = true; //boolean
+            var und; //undefined
+            var nullVar = null; //null
+
+            // Convert the string to integer
+            var s = "153";
+            var v = parseInt(s);
+            var num = Number(s);
+
+            // Write 6 statement which provide truthy & falsey values.
+            var a = "";
+            var num_zero = 0;
+            var num = 1;
+            var x = 10 / "Hallo";
+            console.log("5==='5->:" + (5 === "5"));
+            console.log("5=='5'->" + (5 == "5"));
+            console.log("var a=''->" + Boolean(a));
+            console.log("num_zero=0->" + Boolean(num_zero));
+            console.log("num=1->" + Boolean(num));
+            console.log('var x = 10 / "Hallo"->' + Boolean(x));
+
+            // Square of a number
+
+            function square(num) {
+                var square_value = num * num;
+                return square_value;
+            }
+            console.log(square(5));
+
+            // 2.Swapping 2 numbers
+            var num_1 = 10;
+            var num_2 = 15;
+            function swap(num1, num2) {
+                num_1 = num2;
+                num_2 = num1;
+            }
+            swap(num_1, num_2);
+
+            console.log(
+                "num_1=10;num_2=15" + "num_1:" + num_1 + ";num_2:" + num_2
+            );
+
+            //Addition of 3 numbers
+            function sum(num1, num2, num3) {
+                var total = num1 + num2 + num3;
+                return total;
+            }
+            console.log(sum(1, 3, 7));
+
+            //Celsius to Fahrenheit conversion
+
+            function fahrenheit(celsius) {
+                var result = celsius * 1.8 + 32;
+                return result.toFixed(2);
+            }
+            console.log(fahrenheit(30));
+
+            //Meter to miles
+            function miles(meter) {
+                var mil = meter * 0.000621371;
+                return mil.toFixed(2);
+            }
+            console.log(miles(1000));
+
+            //Pounds to kg
+            function kg(pounds) {
+                var kg = pounds * 0.453592;
+                return kg.toFixed(2);
+            }
+            console.log(kg(1000));
+
+            //Power of any number x ^ y.
+            console.log(Math.pow(2, 3));
+
+            //Calculate Simple Interest
+
+            // (S.I. = P*T*R/100)
+
+            function simpleInterset(p, t, r) {
+                var si = ((p * t * r) / 100).toFixed(2);
+                return si;
+            }
+
+            console.log(simpleInterset(1000, 2, 5));
+
+            //Calculate area of an equilateral triangle
+
+            function equal_tri(inp) {
+                var result = (1.73205080757 * (inp * inp)) / 4;
+                var result_1 = result.toFixed(2);
+                return result_1;
+            }
+            console.log(equal_tri(2));
+
+            //Area Of Isosceles Triangle
+
+            function area(base, height) {
+                var area_value = (base * height) / 2;
+                return area_value.toFixed(2);
+            }
+            console.log(area(2, 4));
+
+            //Volume Of Sphere
+
+            function vos(r) {
+                var cal_val = (4 * 3.14159 * (r * r * r)) / 3;
+                return cal_val.toFixed(2);
+            }
+            console.log(vos(10));
+
+            //Volume Of Prism
+            // The formula for the volume of a prism is V=Bh , where B is the base area and h is the height.
+
+            var length = 9,
+                width = 7,
+                height = 13;
+            var area = length * width;
+            var volume = area * height;
+            console.log(volume);
+
+            //Find area of a triangle.
+
+            var base = 4,
+                height = 6;
+
+            var area_of_triangle = (base * height) / 2;
+
+            console.log("Area of the Triangle:" + area_of_triangle);
+
+            //Give the Actual cost and Sold cost, Calculate Discount Of Product
+
+            var actual_cost = 120;
+            var sold_cost = 60;
+
+            var discount_amount = actual_cost - sold_cost;
+            var discount_percent = (discount_amount / actual_cost) * 100;
+
+            console.log("Discount percentage " + discount_percent);
+
+            // Given their radius of a circle and find its diameter, circumference and area.
+
+            var diameter = 0;
+            var circumference = 0;
+            area_of_circle = 0;
+
+            function cal(radius) {
+                diameter = (2 * radius).toFixed(2);
+                circumference = (2 * 3.14159 * radius).toFixed(2);
+                area_of_circle = (3.14159 * radius * radius).toFixed(2);
+            }
+            cal(5);
+            console.log(
+                `diameter: ${diameter}, circumference: ${circumference}, area_of_circle: ${area_of_circle}`
+            );
+
+            //Given two numbers and perform all arithmetic operations.
+            var add = 0,
+                sub = 0,
+                multiple = 0,
+                division = 0,
+                remainder = 0;
+
+            function arith(num1, num2) {
+                add = num1 + num2;
+                sub = num1 - num2;
+                multiple = num_1 * num2;
+                division = num1 / num2;
+                remainder = num1 % num2;
+            }
+            arith(5, 2);
+            console.log(
+                `add->${add}, sub->${sub}, multiple->${multiple}, division->${division}, remainder->${remainder}`
+            );
+
+            //Display the asterisk pattern as shown below(No loop needed):
+
+            console.log("*****");
+            console.log("*****");
+            console.log("*****");
+            console.log("*****");
+            console.log("*****");
+
+            //Calculate electricity bill?
+            // For example, a consumer consumes 100 watts per hour daily for one month. Calculate the total energy bill of that consumer if per unit rate is 10?
+
+            function cal_eb_bill(consume_unit, cost_per_unit, no_of_days) {
+                var total_cost = (
+                    consume_unit *
+                    cost_per_unit *
+                    no_of_days
+                ).toFixed(2);
+                return total_cost;
+            }
+
+            console.log(cal_eb_bill(100, 10, 30));
+
+            //Program To Calculate CGPA
+
+            var english = 9.5,
+                tamil = 7.5,
+                maths = 9.5,
+                science = 9.9,
+                socialStudy = 8.6;
+            var cgpa = (english * tamil * maths * science * socialStudy) / 5.0; //multiply the subject grade and divided by number of subject
+            var cgpa_per = (9.5 * cgpa).toFixed(2);
+            console.log(`CGPA percentage is: ${cgpa_per}`);
+        </script>
+    </body>
+</html>
